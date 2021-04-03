@@ -1,0 +1,580 @@
+/* GLOBAL */
+html {
+  /* 1rem = 20px */
+  /* font-size: 20px; */
+  font-size: 16px;
+  /* Không khai báo font-size */
+  /* 1rem = 16px */
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-family: pmp; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* position: relative; */
+}
+@font-face {
+  font-family: pmp;
+  src: url(../Fonts/Roboto-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* Tên biến phải có 2 dấu gạch phía trước */
+  --pink: #ff0e83;
+}
+
+.line::after {
+  content: " ";
+  width: 0;
+  height: 4px;
+  background-image: linear-gradient(to right, #fbbd61, #ec7532);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+/* END GLOBAL CSS */
+
+/* HEADER CSS */
+header {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  /* background-color: rgba(34, 12, 12, 0.39); */
+}
+header p {
+  cursor: pointer;
+}
+
+#movieMenu .navbar-nav {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+#movieMenu .nav-item::after {
+  content: " ";
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  display: block;
+  transition: all 0.5s;
+}
+
+#movieMenu .nav-item:hover::after {
+  width: 100%;
+}
+
+#movieMenu .nav-item.active::after {
+  width: 100%;
+}
+
+.header-time-special {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  line-height: 55px;
+  display: inline-block;
+  /* background: transparent; */
+  text-align: center;
+  color: white;
+  border: 1px solid;
+  /* padding: 2rem; */
+}
+
+/* END HEADER CSS */
+
+/* CAROUSEL CSS */
+#movieCarousel .carousel-caption {
+  text-align: left;
+
+  /* CÁCH CANH GIỮA CỦA THẺ ABSOLUTE */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#movieCarousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  background-color: transparent;
+  border: 2px solid white;
+
+  opacity: 1;
+  background-clip: border-box;
+}
+
+#movieCarousel .carousel-indicators li:active {
+  background-color: white;
+  /* background: white; */
+}
+
+#movieCarousel .carousel-indicators {
+  justify-content: flex-start;
+
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 80px;
+
+  margin-left: 0;
+  margin-right: 0;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.carousel .carousel-item {
+  height: 800px;
+}
+
+.carousel-inner .carousel-item.item-1 {
+  background: url(../images/hero-1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.carousel-inner .carousel-item.item-2 {
+  background: url(../images/hero-2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.carousel-inner .carousel-item.item-3 {
+  background: url(../images/hero-3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.carousel-item button {
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  border-radius: 40px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 11px 30px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.movieTrailer a:hover {
+  text-decoration: none;
+}
+
+.movieTrailer a button:hover {
+  /* 1000ms  = 1s */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* direction: Đảo ngược thứ tự; */
+  /* animation-fill-mode: Đảo ngược thứ tự hiệu ứng; */
+  /* animation: full 5s linear 0s infinite direction fill-mode; */
+  transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  text-decoration: none;
+  background: #ec7532;
+  outline: none;
+  box-shadow: none;
+}
+.carousel-item button i {
+  margin-right: 9px;
+}
+
+.carousel ol li.active {
+  background: white;
+}
+
+/* .carousel-item button:hover {
+  background: orange;
+  transition: all 0.5s;
+} */
+/* END CAROUSEL CSS */
+
+/* New IN CSS */
+
+.newIn {
+  padding-top: 80px;
+}
+
+.newIn-h2 {
+  color: #ec7532;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.newIn-h2::after {
+  content: "";
+  width: 160px;
+  height: 3px;
+  background-image: linear-gradient(to right, #fbbd61, #ec7532);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.newIn__img {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.newIn__overlay {
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 180%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fbbd61, #ec7532);
+
+  /* CÁCH BẺ XÉO NỀN THEO TRỤC X */
+  transform: translateX(-135%) skewX(30deg);
+  transition: all 0.5s;
+}
+
+.newIn__play {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.newIn__play i {
+  width: 80px;
+  height: 80px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 15px auto;
+  line-height: 80px;
+}
+
+.newIn__play p a {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.newIn__play-p {
+  font-size: 16px;
+}
+
+.newIn__play a {
+  color: white;
+}
+
+.newIn__play a:hover {
+  color: white;
+  text-decoration: none;
+  /* transform: scale(0.5); */
+  /* transition: all 0.5s; */
+}
+
+.newIn__img:hover .newIn__overlay {
+  transform: translateX(-22%) skewX(30deg);
+}
+/* transform: translateX(-22%) skewX(30deg); */
+
+@media screen and (max-width: 576px) {
+  .newIn__img img {
+    width: 100%;
+  }
+}
+
+.newIn__img:hover .newIn__play {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.newIn__name {
+  font-size: 18px;
+}
+
+.newIn__name p {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.newIn__star {
+  color: #fbbd61;
+}
+
+/* END NEW IN CSS */
+
+/* SHOW TIMES CSS */
+
+.showTimes {
+  padding-top: 80px;
+  margin-top: 6rem;
+}
+
+.showTimes ul {
+  font-size: 18px;
+}
+
+.showTimes .nav-tabs .nav-link {
+  position: relative;
+  color: #4a4a4a;
+  padding: 10px 30px;
+}
+
+.showTimes .nav-tabs .nav-link.active.line::after {
+  width: 100%;
+}
+
+.showTimes .nav-tabs .nav-link:hover.line::after {
+  width: 100%;
+}
+
+/* .showTimes .nav-tabs .nav-link::after {
+  content: " ";
+  width: 0;
+  height: 3px;
+  background-image: linear-gradient(to right, #fbbd61, #ec7532);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  display: inline-block;
+  transition: all 0.5s;
+} */
+
+.showTimes .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.showTimes .nav-tabs .nav-link:hover {
+  border: white;
+}
+
+a.text-warning {
+  text-decoration: none;
+}
+
+.tab-pane a img {
+  border-radius: 10px;
+}
+
+span.time-special {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  line-height: 35px;
+  display: inline-block;
+  background: #4a4a4a;
+  text-align: center;
+  color: white;
+}
+
+/* END SHOW TIME CSS */
+
+/* COMINGSOON CSS */
+/* .comingsoon__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+.comingsoon {
+  background-image: url(../images/slide-3.png);
+  /* position: relative; */
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  /* height: 30rem; */
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+
+.comingsoon h2 {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.comingsoon h2::after {
+  content: "";
+  width: 160px;
+  height: 3px;
+  background-image: linear-gradient(to right, #fbbd61, #ec7532);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.comingsoon__detail-p {
+  font-size: 20px;
+  color: #ec7532;
+}
+
+.comingsoon__detail h1 {
+  font-size: 34px;
+}
+
+.comingsoon__detail i.fa-star {
+  font-size: 14px;
+  color: #fbbd61;
+}
+
+.comingsoon__day {
+  opacity: 0.75;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.comingsoon__video {
+  position: relative;
+}
+
+.comingsoon__video i {
+  width: 84px;
+  display: inline-block;
+  height: 84px;
+  border: 2px solid #ec7532;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 84px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+/* END COMINGSOON CSS */
+
+/* CONTACT CSS */
+.contact {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 2rem;
+  color: #4a4a4a;
+}
+.contact-p {
+  color: #ec7532;
+  font-size: 3rem;
+}
+
+/* END CONTACT CSS */
+
+/* FOOTER MOVIE CSS */
+.movie__footer {
+  width: 100%;
+  background-color: black;
+  padding: 2rem 8rem;
+  color: white;
+}
+
+.movie__footer ul li {
+  list-style: none;
+  /* color: #d8d8d8; */
+  transition: all 0.5s;
+  line-height: 2rem;
+}
+
+.movie__footer ul {
+  margin-top: 1rem;
+}
+
+.movie__footer ul li:hover a {
+  color: #fbbd61;
+  transition: all 0.5s;
+}
+
+.movie__footer ul li a {
+  color: #d8d8d8;
+  text-decoration: none;
+}
+
+.movie__footer h6 {
+  color: #ec7532;
+  font-size: 1.2rem;
+}
+
+.movie__footer i {
+  margin-right: 1rem;
+}
+
+.footer__copyright {
+  margin-top: 3rem;
+  border-top: 1px solid gray;
+  padding: 1rem 0;
+}
+
+.footer__copyright a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__copyright a:hover {
+  color: #fbbd61;
+}
+/* END FOOTER MOVIE CSS */
+
+/* MOVIELIST CSS */
+.movielist img {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+.movielist {
+  /* margin-top: 3rem; */
+  background: #101010;
+  padding: 5rem 12rem;
+}
+
+.movielist__details {
+  text-align: center;
+  cursor: pointer;
+}
+
+.movielist__details p {
+  margin: 0px;
+  color: white;
+  opacity: 0.5;
+}
+
+.movielist img:hover,
+.movielist p:hover {
+  opacity: 1;
+}
+/* END MOVIE LIST CSS */
+@keyframes full {
+  /* 1 chu kỳ / 1 lần chuyển động */
+  /* 100s */
+  0% {
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}

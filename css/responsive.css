@@ -1,0 +1,59 @@
+/* RESPONSIVE DEMO */
+
+/* + Desktop Frist */
+/* Hoàn thành ở màn hình lớn trước sau đó chỉnh sửa cho các màn hình nhỏ hơn */
+
+/* type: screen, print, speech, all */
+/* Phạm vi ảnh hưởng < hoặc = 1200px */
+.demo1 {
+  background-color: red;
+}
+@media screen and (max-width: 1200px) {
+  .demo1 {
+    background-color: pink;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .demo1 {
+    background-color: violet;
+  }
+}
+
+/* Mobile: Xây dựng ở màn hình nhỏ trước, chỉnh sửa cho màn hình lớn sau */
+.demo2 {
+  background-color: purple;
+}
+
+/* Phạm vi ảnh hưởng sẽ lớn hơn hoặc lớn hơn = 1200px */
+@media screen and (min-width: 768px) {
+  .demo2 {
+    background-color: yellow;
+  }
+}
+
+@media screen and (min-width: 996px) {
+  .demo2 {
+    background-color: orange;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .demo2 {
+    background-color: aliceblue;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .demo2 {
+    background-color: tomato;
+  }
+}
+
+@media screen and (min-width: 920px) and (max-width: 950px) {
+  .demo2 {
+    background-color: thistle;
+  }
+}
+
+/* END RESPONSIVE DEMO */
